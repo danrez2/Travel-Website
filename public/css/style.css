@@ -5,6 +5,15 @@
     --light: #F5F5F5;
     --dark: #e9e9f1;
 }
+html, body {
+    overflow-x: hidden;
+  }
+  @media (max-width: 576px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  
 
 .fw-medium {
     font-weight: 600 !important;
@@ -173,29 +182,77 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background-image: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/bg-hero.jpg);
+    background-image: url(../img/ken.jpg );
     background-position: center center;
     background-repeat: repeat;
     background-size: cover;
     animation: backgroundImageAnimation  30s ease-in-out infinite;
 }
-
 @keyframes backgroundImageAnimation {
-  0% {
-    transform: scale(1);
-    background-image: linear-gradient(rgba(35, 35, 44, 0.7), rgba(17, 17, 17, 0.7)), url(../img/img1.jpg);
+    0% {
+      transform: scale(1);
+      background-image: url(../img/new\ photo\ 5.jpg);
+    }
+    12.5% {
+      transform: scale(1);
+      background-image: url(../img/ken.jpg);
+    }
+    25% {
+      transform: scale(1);
+      background-image: url(../img/img1.jpg);
+    }
+    37.5% {
+      transform: scale(1);
+      background-image: url(../img/img13.jpg);
+    }
+    50% {
+      transform: scale(1);
+      background-image: url(../img/van1.jpg);
+    }
+    62.5% {
+        transform: scale(1.2);
+        background-image: url(../img/img25.jpg);
+      }
+      75% {
+        transform: scale(1.5);
+        background-image: url(../img/img16.jpg);
+      }
+      87.5% {
+        transform: scale(1);
+        background-image: url(../img/img23.jpg);
+      }
+      100% {
+        transform: scale(1);
+        background-image: url(../img/img26.jpg);
+      }
+    }
+   
+  
+  
+  .your-selector {
+    animation-name: backgroundImageAnimation;
+    animation-duration: 380s;
+    animation-iteration-count:calc();
+    animation-timing-function: linear;
   }
-  20% {
-    transform: scale(1.5);
-    background-image:linear-gradient(rgba(35, 35, 44, 0.7), rgba(20, 20, 31, .7)),  url(../img/img30.jpg);
-  }
-  40% {
-    transform: scale(1.2);
-    background-image: linear-gradient(rgba(35, 35, 44, 0.7), rgba(20, 20, 31, .7)),  url(../img/img31.jpg);
-  }
- 
+  
 
+/* For desktop screens */
+@media (min-width: 992px) {
+  .hero-header {
+    height: 500px;
+  }
 }
+
+/* For mobile phone screens */
+@media (max-width: 767px) {
+  .hero-header {
+    height: 300px;
+    background-size: cover;
+  }
+}
+
+
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
@@ -501,10 +558,11 @@
 
   }
  
-  .whatsapp-float {
-    position:fixed;
+ /* Default styles for all devices */
+.whatsapp-float {
+    position: fixed;
     bottom: 110px;
-    right: 46px;
+    right: 4%;
     z-index: 999;
     background-color: #2db742;
     color: #fff;
@@ -515,16 +573,14 @@
     box-shadow: 0 6px 8px 2px rgb(0 0 0 / 14%);
     height: 56px;
     width: 56px;
- 
-  
+}
+@media (max-width: 767px) {
+    .whatsapp-float {
+      left: auto;
+      right: 20px; /* adjust the value as needed */
+    }
   }
-  
-  .whatsapp-float i {
-    border-radius: 50%; /* Make the icon round */
-    box-shadow: 0 6px 8px 2px rgb(0 0 0 / 14%);
 
-    
-  }
 
   .wa__btn_popup_txt {
     background-color: #f5f7f9;
@@ -549,7 +605,31 @@
     width: 156px;
 
 }
+@media screen and (max-width: 767px) {
+    .wa__btn_popup_txt {
+        right: 100%;
+        left: auto;
+        margin-left: 7px;
+    }
+  }
   
   
+
+  @media (max-width: 767px) {
+    .col-lg-6 iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .back-to-top {
+    position: fixed;
+  
+  bottom: 110px;
+    left: 20px; /* adjust the left position as needed */
+    z-index: 999;
+  }
   
   
